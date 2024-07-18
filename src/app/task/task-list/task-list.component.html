@@ -1,0 +1,16 @@
+<div class="task-list">
+    <h2>Tasks for Project {{ projectId }}</h2>
+    <button mat-raised-button color="primary" (click)="addTask()">Add Task</button>
+    <mat-list>
+      <mat-list-item *ngFor="let task of tasks" [routerLink]="['/task', task.id]">
+        <mat-icon matListIcon>assignment</mat-icon>
+        <div class="task-info">
+          <h4 matLine>{{ task.name }}</h4>
+          <p matLine>{{ task.description }}</p>
+          <p matLine class="task-status">{{ task.completed ? 'Completed' : 'Not Completed' }}</p>
+        </div>
+        <button mat-button color="primary" [routerLink]="['/task', task.id]">View Task</button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

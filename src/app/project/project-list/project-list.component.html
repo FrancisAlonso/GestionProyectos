@@ -1,0 +1,12 @@
+<div class="project-list">
+    <h2>Projects</h2>
+    <div class="project-card" *ngFor="let project of projects" [routerLink]="['/tasks', project.id]">
+      <mat-card>
+        <mat-card-header class="project-card-header">
+          <mat-card-title>{{ project.name }}</mat-card-title>
+          <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+  

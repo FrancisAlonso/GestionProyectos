@@ -1,0 +1,45 @@
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .project-card {
+    background-color: #e0f7fa; /* Light green background for card */
+    width: calc(50% - 40px); /* Ensure two cards per row with spacing */
+    margin: 20px; /* Increase margin to separate the cards */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Adjust the height of the card to fit content */
+  }
+  
+  .project-card-header {
+    background-color: #b2dfdb; /* Different light green background for header */
+    padding: 10px;
+  }
+  
+  .project-card mat-card-title {
+    color: #004d40; /* Dark green text color for titles */
+  }
+  
+  .project-card mat-card-subtitle,
+  .mat-card-content p {
+    color: white; /* White text color for descriptions */
+  }
+  
+  .mat-card-content {
+    padding: 10px;
+    flex-grow: 1; /* Ensure content takes up available space */
+  }
+  
+  .mat-grid-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  

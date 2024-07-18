@@ -1,0 +1,25 @@
+<div *ngIf="project" class="project-detail">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ project.name }}</mat-card-title>
+        <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="addTask()">Add Task</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <h3>Tasks</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let task of tasks">
+        <mat-icon matListIcon>task</mat-icon>
+        <h4 matLine>{{ task.name }}</h4>
+        <p matLine>{{ task.completed ? 'Completed' : 'Not Completed' }}</p>
+        <button mat-button color="primary" [routerLink]="['/tasks', task.id]">View Task</button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

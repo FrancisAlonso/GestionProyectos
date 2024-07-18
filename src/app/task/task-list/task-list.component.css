@@ -1,0 +1,42 @@
+.task-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  mat-list {
+    width: 100%;
+    background-color: #e0f7fa; /* Light green background for task list */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  mat-list-item {
+    display: flex;
+    align-items: center;
+    background-color: #b2dfdb; /* Different light green background for each task item */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+  }
+  
+  mat-list-item:hover {
+    background-color: #a2c3c1; /* Slightly darker on hover */
+  }
+  
+  mat-list-item h4,
+  mat-list-item p {
+    margin: 0 10px;
+    color: #004d40; /* Dark green text color for better visibility */
+  }
+  
+  mat-list-item .task-status {
+    color: white; /* White text color for task status */
+  }
+  
+  mat-list-item mat-icon {
+    color: #004d40; /* Dark green icon color */
+  }
+  
